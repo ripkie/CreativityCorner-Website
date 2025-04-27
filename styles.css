@@ -21,7 +21,7 @@
   header {
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/images/beeboy2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/images/beeboy2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -362,7 +362,7 @@
   justify-content: center;
   padding: 50px 0;
   background-color: #B60f0a;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/images/backgroundmerah1.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/images/backgroundmerah1.png');
   color: white;
 }
 
