@@ -19,12 +19,10 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <title>About Us - Creativity Corner</title>
+    <title>Katalog - Creativity Corner</title>
 </head>
 
-<body id="about">
+<body>
     <header style="min-height: 100px; background-image: none; background-color: #B60f0a;">
         <div class="container">
             <div class="navbar">
@@ -47,16 +45,16 @@
                         <a href="products.html">Products</a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-book"></i>
-                        <a href="katalog.html">Katalog</a>
-                    </li>
-                    <li>
                         <i class="fa-solid fa-shield-halved"></i>
                         <a href="programs.html">Programs</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-user"></i>
                         <a href="team.html">Team</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-book"></i>
+                        <a href="katalog.html">Katalog</a>
                     </li>
                 </ul>
                 <div class="Contact">
@@ -69,28 +67,58 @@
                     </button>
                 </div>
             </div>
-
         </div>
     </header>
-    <div class="about" id="about">
+    <section class="katalog" id="katalog">
         <div class="container">
-            <div class="about-box">
-                <div class="box">
-                    <img src="../assets/images/grup cre.jpg" alt="about-img" />
+            <h1 class="section-title">Katalog Produk</h1>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="robot">Robot</button>
+                <button class="filter-btn" data-filter="workshop">Workshop & Course</button>
+            </div>
+
+            <div class="katalog-grid">
+                <div class="product-card" data-category="robot">
+                    <img src="../assets/images/beeboy1.jpg" alt="BeeBoy" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-title">BeeBoy</h2>
+                        <p class="product-description">Robot edukasi yang mendukung kurikulum STEM untuk pengembangan
+                            keterampilan Elektronika, Pemrograman, dan Mekanika.</p>
+                        <button class="btn-detail">Lihat Detail</button>
+                    </div>
                 </div>
-                <div class="box">
-                    <h1 data-aos="fade-left">
-                        Our <br />
-                        Philosophy
-                    </h1>
-                    <p title="filosofi">Filosofi kami adalah menciptakan alat-alat yang tidak hanya memecahkan masalah
-                        tetapi juga memberdayakan masyarakat. Dengan mengutamakan kualitas dan aksesibilitas, kami
-                        berkomitmen untuk menjadikan teknologi sebagai bagian dari kehidupan sehari-hari yang lebih
-                        baik.</p>
+                <div class="product-card" data-category="robot">
+                    <img src="../assets/images/EmoRobot.jpg" alt="Emo" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-title">Emo</h2>
+                        <p class="product-description">Robot EMO didesain untuk pendidikan menengah, cocok untuk
+                            ekstrakurikuler, laboratorium teknologi, dan pembelajaran berbasis proyek.</p>
+                        <button class="btn-detail">Lihat Detail</button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="workshop">
+                    <img src="../assets/images/kegiatan1.jpg" alt="Workshop" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-title">Workshop</h2>
+                        <p class="product-description">Workshop interaktif untuk pemahaman praktis tentang rancang
+                            bangun robot menggunakan Beeboy dan Emo.</p>
+                        <button class="btn-detail">Lihat Detail</button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="workshop">
+                    <img src="../assets/images/kegiatan3.jpg" alt="Course" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-title">Course</h2>
+                        <p class="product-description">Kursus mendalam dengan pengajaran komprehensif untuk pemahaman
+                            topik yang lebih lanjut, lengkap dengan sertifikat.</p>
+                        <button class="btn-detail">Lihat Detail</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <footer>
         <div class="container">
             <div class="footer-box">
@@ -113,7 +141,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="box">
                     <h3>Contact Us</h3>
                     <p><i class="fa-solid fa-envelope"></i> research.creeducation@gmail.com</p>
@@ -128,10 +155,6 @@
     </div>
     <script src="../script.js"></script>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 
 </html>

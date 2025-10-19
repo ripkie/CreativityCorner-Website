@@ -139,3 +139,31 @@ setInterval(() => {
   activityImage.src = images[currentImage];
 }, 3000); // Ganti gambar setiap 3 detik
 
+// Katalog Filter
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const productCards = document.querySelectorAll(".product-card");
+
+  if (!filterButtons.length || !productCards.length) return;
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Set active button
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const filter = button.getAttribute("data-filter");
+
+      // Show/hide cards based on filter
+      productCards.forEach(card => {
+        const category = card.getAttribute("data-category");
+        if (filter === "all" || filter === category) {
+          card.classList.remove("hide");
+        } else {
+          card.classList.add("hide");
+        }
+      });
+    });
+  });
+});
+
