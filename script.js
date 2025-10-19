@@ -9,6 +9,7 @@ if (hamburger && menu) {
   });
 }
 
+//products
 document.addEventListener("DOMContentLoaded", function () {
   const swiperElement = document.querySelector(".mySwiper");
   if (swiperElement) {
