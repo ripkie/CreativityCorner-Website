@@ -1092,3 +1092,83 @@ footer {
 .product-card.hide {
   display: none;
 }
+
+/* Existing responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 0 15px;
+    /* Menambahkan padding horizontal untuk container */
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Adjustments for Filter Buttons */
+  .filter-buttons {
+    display: flex;
+    /* Mengubah display menjadi flex */
+    flex-wrap: wrap;
+    /* Memungkinkan tombol untuk wrap ke baris baru */
+    justify-content: center;
+    /* Pusatkan tombol */
+    margin-bottom: 30px;
+    /* Sedikit mengurangi margin bawah */
+  }
+
+  .filter-btn {
+    flex: 1 1 auto;
+    /* Memungkinkan tombol untuk mengisi ruang yang tersedia */
+    min-width: 120px;
+    /* Memberikan lebar minimum agar tidak terlalu kecil */
+    margin: 5px;
+    /* Memberikan jarak antar tombol */
+    font-size: 0.9rem;
+    /* Mengurangi ukuran font tombol */
+    padding: 8px 15px;
+    /* Menyesuaikan padding tombol */
+  }
+
+  /* Adjustments for Product Cards */
+  .katalog-grid {
+    grid-template-columns: 1fr;
+    /* Mengubah grid menjadi satu kolom di layar kecil */
+    gap: 20px;
+    /* Mengurangi jarak antar kartu */
+  }
+
+  .product-image {
+    height: 180px;
+    /* Menyesuaikan tinggi gambar produk */
+  }
+
+  .product-title {
+    font-size: 1.3rem;
+    /* Mengurangi ukuran font judul produk */
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+    /* Mengurangi ukuran font deskripsi produk */
+  }
+
+  .btn-detail {
+    padding: 8px 15px;
+    /* Menyesuaikan padding tombol detail */
+    font-size: 0.9rem;
+    /* Mengurangi ukuran font tombol detail */
+  }
+}
+
+/* Optional: Further refinement for very small screens */
+@media (max-width: 480px) {
+  .filter-btn {
+    min-width: 100px;
+    font-size: 0.85rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
