@@ -14,31 +14,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const swiperElement = document.querySelector(".mySwiper");
   if (swiperElement) {
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,  
+      slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
       autoplay: {
         delay: 3000,
-        disableOnInteraction: false, 
+        disableOnInteraction: false,
       },
       pagination: {
-        el: ".swiper-pagination",  
+        el: ".swiper-pagination",
         clickable: true,
         dynamicBullets: true,
       },
       navigation: {
-        nextEl: ".swiper-button-next", 
-        prevEl: ".swiper-button-prev", 
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
       breakpoints: {
         640: {
           slidesPerView: 1,
         },
         768: {
-          slidesPerView: 2,  
+          slidesPerView: 2,
         },
         1024: {
-          slidesPerView: 3, 
+          slidesPerView: 3,
         },
       },
     });
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function slideRight() {
     if (teamBox.scrollLeft + teamBox.clientWidth >= teamBox.scrollWidth) {
-      teamBox.scrollLeft = 0; 
+      teamBox.scrollLeft = 0;
     } else {
       teamBox.scrollBy({ left: scrollStep, behavior: "smooth" });
     }
@@ -123,11 +123,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // imageSlider.js
 const images = [
-  'assets/images/kegiatan1.jpg',
-  'assets/images/kegiatan2.jpg',
-  'assets/images/kegiatan3.jpg',
-  'assets/images/kegiatan4.jpg',
-  'assets/images/kegiatan5.jpg'
+  // Perubahan path di bawah ini:
+  '../assets/images/kegiatan1.jpg',
+  '../assets/images/kegiatan2.jpg',
+  '../assets/images/kegiatan3.jpg',
+  '../assets/images/kegiatan4.jpg',
+  '../assets/images/kegiatan5.jpg'
 ];
 
 let currentImage = 0;
