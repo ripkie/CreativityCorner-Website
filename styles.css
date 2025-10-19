@@ -948,6 +948,20 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar .Contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Memberi jarak antara tombol dan ikon hamburger */
+  }
+
+  .navbar .contact-btn {
+    padding: 6px 14px;
+    /* Ukuran tombol dikecilkan */
+    font-size: 13px;
+    /* Ukuran font dikecilkan */
+  }
+
   .footer-box {
     row-gap: 40px;
   }
@@ -1161,7 +1175,7 @@ footer {
   }
 }
 
-/* Optional: Further refinement for very small screens */
+/* Optional: penyesuaian layar kecil bgt */
 @media (max-width: 480px) {
   .filter-btn {
     min-width: 100px;
