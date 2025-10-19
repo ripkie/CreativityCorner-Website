@@ -947,6 +947,7 @@ footer {
   }
 }
 
+/* banner atas*/
 @media screen and (max-width: 768px) {
   .navbar .Contact {
     display: flex;
@@ -969,6 +970,45 @@ footer {
   .footer-box .box:nth-child(2),
   .footer-box .box:nth-child(3) {
     padding: 0;
+  }
+
+  /* Pengecilan ukuran untuk logo, tombol, dan hamburger */
+  .logo {
+    width: 120px;
+    /* Logo diperkecil dari 150px */
+  }
+
+  .navbar .contact-btn {
+    padding: 5px 12px;
+    /* Padding tombol dikecilkan lagi */
+    font-size: 12px;
+    /* Font tombol dikecilkan lagi */
+  }
+
+  .hamburger-box {
+    width: 30px;
+    /* Lebar area ikon diperkecil */
+    height: 18px;
+    /* Tinggi area ikon diperkecil */
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 30px;
+    /* Lebar garis hamburger disesuaikan */
+    height: 3px;
+    /* Tebal garis hamburger disesuaikan */
+  }
+
+  .hamburger-inner::before {
+    top: -8px;
+    /* Jarak garis atas disesuaikan */
+  }
+
+  .hamburger-inner::after {
+    bottom: -8px;
+    /* Jarak garis bawah disesuaikan */
   }
 }
 
