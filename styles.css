@@ -947,7 +947,7 @@ footer {
   }
 }
 
-/* banner atas*/
+/* banner atas hp*/
 @media screen and (max-width: 768px) {
   .navbar .Contact {
     display: flex;
@@ -972,44 +972,59 @@ footer {
     padding: 0;
   }
 
-  /* Pengecilan ukuran untuk logo, tombol, dan hamburger */
+  /* Pengecilan ukuran "MINI" untuk logo, tombol, dan hamburger */
   .logo {
-    width: 120px;
-    /* Logo diperkecil dari 150px */
+    width: 85px;
+    /* Ukuran logo dibuat sangat kecil */
   }
 
   .navbar .contact-btn {
-    padding: 5px 12px;
-    /* Padding tombol dikecilkan lagi */
-    font-size: 12px;
-    /* Font tombol dikecilkan lagi */
+    padding: 3px 9px;
+    /* Padding tombol dibuat sangat tipis */
+    font-size: 10px;
+    /* Font tombol dibuat sangat kecil */
+  }
+
+  .navbar .Contact {
+    gap: 10px;
+    /* Jarak antara tombol dan ikon hamburger dikurangi */
   }
 
   .hamburger-box {
-    width: 30px;
+    width: 24px;
     /* Lebar area ikon diperkecil */
     height: 18px;
-    /* Tinggi area ikon diperkecil */
+    /* Tinggi area ikon disesuaikan */
   }
 
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
-    width: 30px;
+    width: 24px;
     /* Lebar garis hamburger disesuaikan */
-    height: 3px;
-    /* Tebal garis hamburger disesuaikan */
+    height: 2px;
+    /* Tebal garis hamburger ditipiskan */
   }
 
   .hamburger-inner::before {
-    top: -8px;
+    top: -6px;
     /* Jarak garis atas disesuaikan */
   }
 
   .hamburger-inner::after {
-    bottom: -8px;
+    bottom: -6px;
     /* Jarak garis bawah disesuaikan */
   }
+}
+
+.hamburger-inner::before {
+  top: -8px;
+  /* Jarak garis atas disesuaikan */
+}
+
+.hamburger-inner::after {
+  bottom: -8px;
+  /* Jarak garis bawah disesuaikan */
 }
 
 /* Footer */
