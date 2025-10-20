@@ -990,30 +990,25 @@ footer {
     /* Jarak antara tombol dan ikon hamburger dikurangi */
   }
 
+  /* Pengecilan ukuran "PALING KECIL" untuk hamburger */
   .hamburger-box {
-    width: 8px;
-    /* Lebar area ikon diperkecil */
-    height: 5px;
-    /* Tinggi area ikon disesuaikan */
+    width: 22px;
+    height: 16px;
   }
 
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
-    width: 12px;
-    /* Lebar garis hamburger disesuaikan */
+    width: 22px;
     height: 2px;
-    /* Tebal garis hamburger ditipiskan */
   }
 
   .hamburger-inner::before {
     top: -6px;
-    /* Jarak garis atas disesuaikan */
   }
 
   .hamburger-inner::after {
     bottom: -6px;
-    /* Jarak garis bawah disesuaikan */
   }
 }
 
