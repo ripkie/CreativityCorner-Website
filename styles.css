@@ -128,8 +128,10 @@ header {
   background-color: #fff;
 }
 
+/* Menaikkan posisi teks hero di mobile */
 .hero {
-  margin-top: 100px;
+  margin-top: 40px;
+  /* Diperkecil lagi agar posisi teks lebih naik */
 }
 
 .hero h1 {
