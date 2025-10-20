@@ -991,16 +991,16 @@ footer {
   }
 
   .hamburger-box {
-    width: 24px;
+    width: 8px;
     /* Lebar area ikon diperkecil */
-    height: 18px;
+    height: 5px;
     /* Tinggi area ikon disesuaikan */
   }
 
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
-    width: 24px;
+    width: 12px;
     /* Lebar garis hamburger disesuaikan */
     height: 2px;
     /* Tebal garis hamburger ditipiskan */
