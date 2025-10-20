@@ -1023,6 +1023,31 @@ footer {
   .hamburger-inner::after {
     bottom: -6px;
   }
+
+  /* Perbaikan untuk halaman "About Us" di mobile */
+  .about {
+    min-height: auto;
+    /* Mengizinkan tinggi section menyesuaikan konten */
+    padding: 60px 0;
+    /* Memberi jarak atas dan bawah */
+  }
+
+  .about-box {
+    grid-template-columns: 1fr;
+    /* Mengubah layout menjadi satu kolom */
+    gap: 30px;
+    /* Mengurangi jarak antara gambar dan teks */
+  }
+
+  .about-box .box:nth-child(1)::before {
+    transform: translate(10px, 10px);
+    /* Mengurangi efek bayangan */
+  }
+
+  .about-box .box h1 {
+    font-size: 36px;
+    /* Menyesuaikan ukuran judul */
+  }
 }
 
 .hamburger-inner::before {
