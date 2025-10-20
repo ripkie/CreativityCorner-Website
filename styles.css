@@ -205,12 +205,23 @@ header {
     opacity: 0;
     width: 250px;
     height: 100vh;
-    background-color: #fff;
-    transition: all 0.1s ease-out;
-    -webkit-transition: all 0.1s ease-out;
-    -moz-transition: all 0.1s ease-out;
-    -ms-transition: all 0.1s ease-out;
-    -o-transition: all 0.1s ease-out;
+
+    /* Perubahan untuk efek glassmorphism */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Latar belakang transparan */
+    backdrop-filter: blur(10px);
+    /* Efek blur pada konten di belakangnya */
+    -webkit-backdrop-filter: blur(10px);
+    /* Dukungan untuk browser Safari */
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    /* Garis tepi tipis */
+
+    transition: all 0.3s ease-out;
+    /* Transisi diperhalus */
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
   }
 
   .navbar .menu.menu-active {
