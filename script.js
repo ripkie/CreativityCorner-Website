@@ -9,7 +9,7 @@ if (hamburger && menu) {
   });
 }
 
-//products
+// Products Swiper
 document.addEventListener("DOMContentLoaded", function () {
   const swiperElement = document.querySelector(".mySwiper");
   if (swiperElement) {
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// team
+// Team Slider
 document.addEventListener("DOMContentLoaded", function () {
   const teamBox = document.querySelector(".team-box");
   const prevBtn = document.querySelector(".prev-btn");
@@ -121,23 +121,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// imageSlider.js
-const images = [
-  // Perubahan path di bawah ini:
-  '../assets/images/kegiatan1.jpg',
-  '../assets/images/kegiatan2.jpg',
-  '../assets/images/kegiatan3.jpg',
-  '../assets/images/kegiatan4.jpg',
-  '../assets/images/kegiatan5.jpg'
-];
-
-let currentImage = 0;
+// Activity Image Slider
 const activityImage = document.getElementById('activityImage');
+// ***** FIX: Only run the slider if the image element exists *****
+if (activityImage) {
+  const images = [
+    '../assets/images/kegiatan1.jpg',
+    '../assets/images/kegiatan2.jpg',
+    '../assets/images/kegiatan3.jpg',
+    '../assets/images/kegiatan4.jpg',
+    '../assets/images/kegiatan5.jpg'
+  ];
+  let currentImage = 0;
 
-setInterval(() => {
-  currentImage = (currentImage + 1) % images.length;
-  activityImage.src = images[currentImage];
-}, 3000); // Ganti gambar setiap 3 detik
+  setInterval(() => {
+    currentImage = (currentImage + 1) % images.length;
+    activityImage.src = images[currentImage];
+  }, 3000);
+}
 
 // Katalog Filter
 document.addEventListener("DOMContentLoaded", function () {
@@ -148,13 +149,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   filterButtons.forEach(button => {
     button.addEventListener("click", () => {
-      // Set active button
       filterButtons.forEach(btn => btn.classList.remove("active"));
       button.classList.add("active");
 
       const filter = button.getAttribute("data-filter");
 
-      // Show/hide cards based on filter
       productCards.forEach(card => {
         const category = card.getAttribute("data-category");
         if (filter === "all" || filter === category) {
@@ -166,4 +165,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
