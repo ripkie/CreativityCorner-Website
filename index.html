@@ -1,174 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./assets/images/logocc.PNG" type="image/x-icon" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="hamburgers.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <title>Creativity Corner - Learn, Create, Innovate</title>
-</head>
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="./assets/images/logocc.PNG" type="image/x-icon" />
 
-<body id="home">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
 
-  <header>
-    <div class="container">
-      <div class="navbar">
-        <div class="logo">
-          <h1><img class="logo" src="./assets/images/logocc.PNG" alt="Creativity Corner Logo"></h1>
+    <!-- Font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Jonsuh Hamburger -->
+    <link rel="stylesheet" href="hamburgers.css" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Swiper.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <title>Creativity Corner</title>
+  </head>
+  <body id="home">
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+          <div class="logo">
+            <h1><img class=logo src="./assets/images/logocc.PNG"></h1>
+          </div>
+          <ul class="menu">
+            <h1>Creativity Corner</h1>
+            <h3>Overview</h3>
+            <li>
+              <i class="fa-solid fa-house"></i>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-ribbon"></i>
+              <a href="#about">About Us</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-robot"></i>
+              <a href="#products">Products</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-shield-halved"></i>
+              <a href="#programs">Programs</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-user"></i>
+              <a href="#team">Team</a>
+            </li>
+          </ul>
+          <div class="Contact">
+            <a href="https://www.instagram.com/creativitycorner.cc?igsh=MTY4NW9iOGYybXNk" target="_blank" class="contact-btn"> Contact Us  </a>
+            <!-- Jonsuh Hamburger -->
+            <button class="hamburger hamburger--spin" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
         </div>
-        <ul class="menu">
-          <h1>Creativity Corner</h1>
-          <h3>Overview</h3>
-          <li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
-          <li><i class="fa-solid fa-ribbon"></i><a href="page/about.html">About Us</a></li>
-          <li><i class="fa-solid fa-robot"></i><a href="page/products.html">Products</a></li>
-          <li><i class="fa-solid fa-book"></i><a href="page/katalog.html">Katalog</a></li>
-          <li><i class="fa-solid fa-shield-halved"></i><a href="page/programs.html">Programs</a></li>
-          <li><i class="fa-solid fa-user"></i><a href="page/team.html">Team</a></li>
-        </ul>
-        <div class="Contact">
-          <a href="https://www.instagram.com/creativitycorner.cc?igsh=MTY4NW9iOGYybXNk" target="_blank"
-            class="contact-btn">Contact Us</a>
-          <button class="hamburger hamburger--spin" type="button">
-            <span class="hamburger-box"><span class="hamburger-inner"></span></span>
-          </button>
+
+        <!-- Hero -->
+        <div class="hero">
+          <h1>
+          Creativity <br />
+          Corner
+          </h1>
+          <p title="Deskripsi">Selamat datang di Creativity Corner! Kami menawarkan pengalaman belajar interaktif yang dirancang khusus untuk siswi SMP dan SMA, dengan fokus pada pengembangan keterampilan di tiga bidang utama: Elektronika (Elka), Pemrograman, dan Mekanika.</p>
+          <a href="#products"> <button>Our Products </button> </a>
         </div>
       </div>
-      <div class="hero">
-        <h1>Empowering Future Innovators</h1>
-        <p>Kami menghadirkan pendidikan STEM yang interaktif dan menyenangkan untuk siswi SMP & SMA melalui robotika.
+    </header>
+    <!-- Header -->
+
+    <!-- About Us -->
+    <div class="about" id="about">
+      <div class="container">
+        <div class="about-box">
+          <div class="box">
+            <img src="./assets/images/grup cre.jpg" alt="about-img" />
+          </div>
+          <div class="box">
+            <h1 data-aos="fade-left">
+              Our <br />
+              Philosophy
+            </h1>
+            <p title="filosofi">Filosofi kami adalah menciptakan alat-alat yang tidak hanya memecahkan masalah tetapi juga memberdayakan masyarakat. Dengan mengutamakan kualitas dan aksesibilitas, kami berkomitmen untuk menjadikan teknologi sebagai bagian dari kehidupan sehari-hari yang lebih baik.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About Us -->
+
+    <!-- Products -->
+    <div class="products" id="products">
+      <div class="container">
+        <h1 data-aos="fade-up">Our Products</h1>
+        <p title="Product" data-aos="fade-up" data-aos-delay="200">
+          Learn, Create, Innovate - Start Your Journey Today!
         </p>
-        <a href="#services"><button>Jelajahi Program Kami</button></a>
-      </div>
-    </div>
-  </header>
-  <section id="services" class="services-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 data-aos="fade-up">Apa yang Kami Tawarkan?</h2>
-        <p data-aos="fade-up" data-aos-delay="200">Fokus kami adalah pengembangan keterampilan di tiga bidang utama.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <i class="fas fa-robot"></i>
-          <h3>Robot Edukasi</h3>
-          <p>Produk robot Beeboy dan Emo yang dirancang khusus untuk pembelajaran praktis.</p>
-        </div>
-        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-          <i class="fas fa-chalkboard-teacher"></i>
-          <h3>Workshop Interaktif</h3>
-          <p>Sesi praktik langsung untuk membangun dan memprogram robot dari dasar.</p>
-        </div>
-        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-          <i class="fas fa-graduation-cap"></i>
-          <h3>Kursus Bersertifikat</h3>
-          <p>Program pembelajaran mendalam untuk penguasaan materi robotika tingkat lanjut.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="products" id="products">
-    <div class="container">
-      <div class="section-header">
-        <h2 data-aos="fade-up">Produk Unggulan Kami</h2>
-      </div>
-      <div class="featured-products-grid">
-        <div class="featured-product" data-aos="fade-right">
-          <img src="./assets/images/beeboy1.jpg" alt="BeeBoy Robot">
-          <div class="featured-product-info">
-            <h3>BeeBoy</h3>
-            <p>Robot edukasi modular yang sempurna untuk pemula. Mendukung kurikulum STEM dengan fokus pada elektronika,
-              pemrograman, dan mekanika.</p>
-            <a href="page/detail-beeboy.html">Lihat Detail &rarr;</a>
-          </div>
-        </div>
-        <div class="featured-product" data-aos="fade-left">
-          <img src="./assets/images/EmoRobot.jpg" alt="Emo Robot">
-          <div class="featured-product-info">
-            <h3>Emo Robot</h3>
-            <p>Didesain untuk pendidikan menengah, Emo cocok untuk kegiatan ekstrakurikuler, lab teknologi, dan
-              pembelajaran berbasis proyek yang lebih kompleks.</p>
-            <a href="page/detail-emo.html">Lihat Detail &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="programs" id="programs">
-    <div class="container">
-      <h1 data-aos="fade-up">Our Programs</h1>
-      <p title="Programs" data-aos="fade-up" data-aos-delay="200">
-        Simplifying Technology Education for a Brighter Future!
-      </p>
-      <div class="programs-box">
-        <div class="box" data-aos="fade-up" data-aos-delay="400">
-          <div class="box-header"><i class="fa-solid fa-gem"></i><span>Standard</span></div>
-          <p><i class="fa-solid fa-clock"></i> <strong>Durasi:</strong> 60 menit x 2 pertemuan.<br><br><i
-              class="fa-solid fa-location-dot"></i> <strong>Tempat:</strong> Bandung Techno Park.<br><br><i
-              class="fa-solid fa-award"></i> <strong>Benefit:</strong><br>- Sertifikat resmi.<br>- Pengetahuan tentang
-            Robotik.<br>- Sesi interaktif & praktik langsung.<br>- Hands-on project.<br></p>
-        </div>
-        <div class="box" data-aos="fade-up" data-aos-delay="600">
-          <div class="box-header"><i class="fa-solid fa-gem"></i><span>Premium</span></div>
-          <p><i class="fa-solid fa-clock"></i> <strong>Durasi:</strong> 60 menit x 3 pertemuan.<br><br><i
-              class="fa-solid fa-location-dot"></i> <strong>Tempat:</strong> Bandung Techno Park.<br><br><i
-              class="fa-solid fa-award"></i> <strong>Benefit:</strong><br>- Sertifikat resmi.<br>- Pengetahuan tentang
-            Robotik.<br>- Buku panduan materi.<br>- Sesi interaktif & praktik langsung.<br>- Hands-on project.<br>-
-            Merchandise eksklusif.<br></p>
-        </div>
-        <div class="box" data-aos="fade-up" data-aos-delay="800">
-          <div class="box-header"><i class="fa-solid fa-gem"></i><span>Elite</span></div>
-          <p><i class="fa-solid fa-clock"></i> <strong>Durasi:</strong> 60 menit x 4 pertemuan.<br><br><i
-              class="fa-solid fa-location-dot"></i> <strong>Tempat:</strong> Bandung Techno Park.<br><br><i
-              class="fa-solid fa-award"></i> <strong>Benefit:</strong><br>- Sertifikat resmi.<br>- Pengetahuan tentang
-            Robotik.<br>- Buku panduan materi.<br>- Sesi interaktif & praktik langsung.<br>- Hands-on project.<br>-
-            Merchandise eksklusif.<br>- Hadiah spesial: Robot Beeboy.<br></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <div class="footer-box">
-        <div class="box">
-          <div class="footer-logos">
-            <img src="assets/images/logobtp1.png" alt="Logo 1">
-            <img src="assets/images/logocc.PNG" alt="Logo 2">
-          </div>
-          <h2>Creativity Corner</h2>
-          <p>Learn, Create, Innovate.</p>
-          <div class="footer-icon">
-            <a href="https://www.instagram.com/creativitycorner.cc?igsh=MTY4NW9iOGYybXNk"><i
-                class="fa-brands fa-square-facebook"></i></a>
-            <a href="https://www.instagram.com/creativitycorner.cc?igsh=MTY4NW9iOGYybXNk"><i
-                class="fa-brands fa-square-instagram"></i></a>
-            <a href="https://www.linkedin.com/in/ekadasa-startup-5572b4354/"><i class="fa-brands fa-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="box">
-          <h3>Contact Us</h3>
-          <p><i class="fa-solid fa-envelope"></i> research.creeducation@gmail.com</p>
-          <p><i class="fa-solid fa-phone"></i> 0123456789</p>
-          <p><i class="fa-solid fa-location-dot"></i> Bandung Techno Park, Telkom University</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <div class="copyright">
-    <p>&copy; Copyright 2025 by <span>Creativity Corner</span>, All Rights Reserved.</p>
-  </div>
-  <script src="script.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 800 });
-  </script>
-</body>
+        
 
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/beeboy1.jpg" alt="robot-img" />
+              <div class="robot-desc">
+                <p>Beeboy adalah robot edukasi  yang mendukung kurikulum STEM (Science, Technology, Engineering, Mathematics) fokus pada pengembangan keterampilan Elektronika , Pemrograman, dan Mekanika.</p>
+                <h2>BeeBoy</h2>
+                <h4>Robot</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/EmoRobot.jpg" alt="robot-img" />
+              <div class="robot-desc">
+                <p>Robot EMO didesain sesuai kebutuhan pendidikan menengah yang dapat digunakan dalam kegiatan ekstrakurikuler, laboratorium teknologi, maupun pembelajaran berbasis proyek.</p>
+                <h2>Emo</h2>
+                <h4>Robot</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/kegiatan1.jpg" alt="robot-img" />
+              <div class="robot-desc">
+                <p>Workshop memberikan pemahaman praktis Dengan pendekatan dua arah yang menyenangkan tentang rancang bangun robot melalui bahan pembelajaran seperti Beeboy dan Emo.</p>
+                <h2>Workshop</h2>
+                <h4>activity</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/kegiatan3.jpg" alt="robot-img" />
+              <div class="robot-desc">
+                <p>Kursus dirancang untuk memberikan pemahaman yang lebih mendalam tentang topik yang dipelajari, dengan pengajaran yang komprehensif dan kesempatan untuk mendapatkan sertifikat.</p>
+                <h2>Course</h2>
+                <h4>activity</h4>
+              </div>
+            </div>
+          </div>
+    
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Products -->
+
+    <!-- Programs -->
+    <div class="programs" id="programs">
+      <div class="container">
+        <h1 data-aos="fade-up">Our Programs</h1>
+        <p title="Programs" data-aos="fade-up" data-aos-delay="200">
+          Simplifying Technology Education for a Brighter Future!
+        </p>
+    
+        <div class="programs-box">
+          
+          <div class="box" data-aos="fade-up" data-aos-delay="400">
+            <div class="box-header">
+              <i class="fa-solid fa-gem"></i>
+              <span>Standard</span>
+            </div>
+            <p>
+              <i class="fa-solid fa-clock"></i> <strong>Durasi:</strong> 60 menit x 2 pertemuan.<br><br>
+              <i class="fa-solid fa-location-dot"></i> <strong>Tempat:</strong> Bandung Techno Park.<br><br>
+              <i class="fa-solid fa-award"></i> <strong>Benefit:</strong><br>
+              - Sertifikat resmi.<br>
+              - Pengetahuan tentang Robotik.<br>
+              - Sesi interaktif & praktik langsung.<br>
+              - Hands-on project.<br>
+            </p>
+          </div>
+    
+          <div class="box" data-aos="fade-up" data-aos-delay="600">
+            <div class="box-header">
+              <i class="fa-solid fa-gem"></i>
+              <span>Premium</span>
+            </div>
+            <p>
+              <i class="fa-solid fa-clock"></i> <strong>Durasi:</strong> 60 menit x 3 pertemuan.<br><br>
+              <i class="fa-solid fa-location-dot"></i> <strong>Tempat:</strong> Bandung Techno Park.<br><br>
+              <i class="fa-solid fa-award"></i> <strong>Benefit:</strong><br>
+              - Sertifikat resmi.<br>
+              - Pengetahuan tentang Robotik.<br>
+              - Buku panduan materi.<br>
+              - Sesi interaktif & praktik langsung.<br>
+              - Hands-on project.<br>
+              - Merchandise eksklusif.<br>
+            </p>
+          </div>
+    
+          <div class="box" data-aos="fade-up" data-aos-delay="800">
+            <div class="box-header">
+              <i class="fa-solid fa-gem"></i>
+              <span>Elite</span>
+            </div>
+            <p>
+              <i class="fa-solid fa-clock"></i> <strong>Durasi:</strong> 60 menit x 4 pertemuan.<br><br>
+              <i class="fa-solid fa-location-dot"></i> <strong>Tempat:</strong> Bandung Techno Park.<br><br>
+              <i class="fa-solid fa-award"></i> <strong>Benefit:</strong><br>
+              - Sertifikat resmi.<br>
+              - Pengetahuan tentang Robotik.<br>
+              - Buku panduan materi.<br>
+              - Sesi interaktif & praktik langsung.<br>
+              - Hands-on project.<br>
+              - Merchandise eksklusif.<br>
+              - Hadiah spesial: Robot Beeboy.<br>
+            </p>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    <!-- programs -->
+
+    <!-- Activity -->
+    <section class="activity" id="activity">
+      <div class="activity-container">
+        <div class="activity-card card-large">
+          <img id="activityImage" src="kegiatan1.jpg" alt="activity Image" class="activity-image">
+        </div>
+        <div class="activity-card card-small">
+          <h2>Our Activity</h2>
+          <p>Kami menghadirkan Workshop dan Course interaktif di bidang Elektronika, Pemrograman, dan Mekanika, didukung oleh robot Beeboy dan Emo untuk mengembangkan kreativitas dan keterampilan siswi SMP dan SMA.
+
+          </p>
+          <a href="https://www.instagram.com/creativitycorner.cc?igsh=MTY4NW9iOGYybXNk<i" class="btn-activity">Selengkapnya</a>
+        </div>
+      </div>
+    </section>
+    <!-- Activity-->
+
+    <!-- Team -->
+    <div class="team" id="team">
+      <div class="container">
+        <h1 data-aos="fade-up">Our Team <br />Let's Meet Our Team</h1>
+        <p title="team" data-aos="fade-up" data-aos-delay="200">
+          This is our Structure Organization
+        </p>
+    
+        <div class="team-slider">
+          <button class="prev-btn">&#10094;</button> 
+          
+          <div class="team-box">
+            <div class="box">
+              <div class="people">
+                <img src="./assets/images/loren cre.jpg" alt="Person 1" />
+                <div class="people-desc">
+                  <h3>Dava Mahardika Laorenz</h3>
+                  <p>Chief Executive Officer 
+                    (CEO)</p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="people">
+                <img src="./assets/images/rafipra cre.jpg" alt="Person 2" />
+                <div class="people-desc">
+                  <h3>Muhammad Rafi Pranaja</h3>
+                  <p>Chief Operating Officer 
+                    (COO) </p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="people">
+                <img src="./assets/images/muti cre.jpg" alt="Person 3" />
+                <div class="people-desc">
+                  <h3>Muthia Rihadatul Aisyi</h3>
+                  <p>Chief Financial Officer 
+                    (CFO)</p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="people">
+                <img src="./assets/images/hana cre.jpg" alt="Person 4" />
+                <div class="people-desc">
+                  <h3>Hana Inda Nafisah</h3>
+                  <p>Chief Compliance Officer 
+                    (CCO)</p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="people">
+                <img src="./assets/images/bella cre.jpg" alt="Person 5" />
+                <div class="people-desc">
+                  <h3>Nabilla Rahma Anasya</h3>
+                  <p>Chief Marketing Officer 
+                    (CMO)</p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="people">
+                <img src="./assets/images/nadyah cre.jpg" alt="Person 6" />
+                <div class="people-desc">
+                  <h3>Nadyah Rizky Amelia</h3>
+                  <p>Chief Technology Officer 
+                    (CTO)</p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="people">
+                <img src="./assets/images/rafifad cre.jpg" alt="Person 7" />
+                <div class="people-desc">
+                  <h3>Rafi Fadyan A.S</h3>
+                  <p>Chief Human Resources 
+                    Officer (CHRO)  </p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="people">
+                <img src="./assets/images/ara cre.jpg" alt="Person 8" />
+                <div class="people-desc">
+                  <h3>Fadila Zahra Achdalina</h3>
+                  <p>Chief Data Officer (CDO)</p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="people">
+                <img src="./assets/images/nico cre.jpg" alt="Person 9" />
+                <div class="people-desc">
+                  <h3>Nicholas Setia Immanuel</h3>
+                  <p>Chief Product Officer (CPO)</p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="people">
+                <img src="./assets/images/rifan cre.jpg" alt="Person 10" />
+                <div class="people-desc">
+                  <h3>Moh. Rifan Kasyiful</h3>
+                  <p>Chief Innovation Officer 
+                    (CIO)</p>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="people">
+                <img src="./assets/images/nazer2.jpg" alt="Person 11" />
+                <div class="people-desc">
+                  <h3>Nazer Muhammad Noor</h3>
+                  <p>Chief Customer Officer 
+                    (CCO)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <button class="next-btn">&#10095;</button> 
+        </div>
+      </div>
+    </div>
+    <!-- Team -->
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-box">
+      <div class="box">
+        <!-- LOGO START -->
+        <div class="footer-logos">
+          <img src="assets/images/logobtp1.png" alt="Logo 1">
+          <img src="assets/images/logocc.PNG" alt="Logo 2">
+        </div>
+        <!-- LOGO END -->
+        <h2>Creativity Corner</h2>
+        <p>Learn, Create, Innovate.</p>
+        <div class="footer-icon">
+          <a href="https://www.instagram.com/creativitycorner.cc?igsh=MTY4NW9iOGYybXNk">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/creativitycorner.cc?igsh=MTY4NW9iOGYybXNk">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ekadasa-startup-5572b4354/">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Contact Us</h3>
+        <p><i class="fa-solid fa-envelope"></i> research.creeducation@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 0123456789</p>
+        <p><i class="fa-solid fa-location-dot"></i> Bandung Techno Park, Telkom University</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+      <p>&copy; Copyright 2025 by <span> Creativity Corner </span>, All Rights Reserved.</p>
+    </div>
+    <!-- Copyright -->
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          575: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>

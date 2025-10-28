@@ -9,43 +9,43 @@ if (hamburger && menu) {
   });
 }
 
-// Products Swiper
+//products
 document.addEventListener("DOMContentLoaded", function () {
   const swiperElement = document.querySelector(".mySwiper");
   if (swiperElement) {
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
+      slidesPerView: 1,  
       spaceBetween: 20,
       loop: true,
       autoplay: {
         delay: 3000,
-        disableOnInteraction: false,
+        disableOnInteraction: false, 
       },
       pagination: {
-        el: ".swiper-pagination",
+        el: ".swiper-pagination",  
         clickable: true,
         dynamicBullets: true,
       },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next", 
+        prevEl: ".swiper-button-prev", 
       },
       breakpoints: {
         640: {
           slidesPerView: 1,
         },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 2,  
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 3, 
         },
       },
     });
   }
 });
 
-// Team Slider
+// team
 document.addEventListener("DOMContentLoaded", function () {
   const teamBox = document.querySelector(".team-box");
   const prevBtn = document.querySelector(".prev-btn");
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function slideRight() {
     if (teamBox.scrollLeft + teamBox.clientWidth >= teamBox.scrollWidth) {
-      teamBox.scrollLeft = 0;
+      teamBox.scrollLeft = 0; 
     } else {
       teamBox.scrollBy({ left: scrollStep, behavior: "smooth" });
     }
@@ -121,47 +121,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Activity Image Slider
+// imageSlider.js
+const images = [
+  'assets/images/kegiatan1.jpg',
+  'assets/images/kegiatan2.jpg',
+  'assets/images/kegiatan3.jpg',
+  'assets/images/kegiatan4.jpg',
+  'assets/images/kegiatan5.jpg'
+];
+
+let currentImage = 0;
 const activityImage = document.getElementById('activityImage');
-// ***** FIX: Only run the slider if the image element exists *****
-if (activityImage) {
-  const images = [
-    '../assets/images/kegiatan1.jpg',
-    '../assets/images/kegiatan2.jpg',
-    '../assets/images/kegiatan3.jpg',
-    '../assets/images/kegiatan4.jpg',
-    '../assets/images/kegiatan5.jpg'
-  ];
-  let currentImage = 0;
 
-  setInterval(() => {
-    currentImage = (currentImage + 1) % images.length;
-    activityImage.src = images[currentImage];
-  }, 3000);
-}
+setInterval(() => {
+  currentImage = (currentImage + 1) % images.length;
+  activityImage.src = images[currentImage];
+}, 3000); // Ganti gambar setiap 3 detik
 
-// Katalog Filter
-document.addEventListener("DOMContentLoaded", function () {
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const productCards = document.querySelectorAll(".product-card");
-
-  if (!filterButtons.length || !productCards.length) return;
-
-  filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      filterButtons.forEach(btn => btn.classList.remove("active"));
-      button.classList.add("active");
-
-      const filter = button.getAttribute("data-filter");
-
-      productCards.forEach(card => {
-        const category = card.getAttribute("data-category");
-        if (filter === "all" || filter === category) {
-          card.classList.remove("hide");
-        } else {
-          card.classList.add("hide");
-        }
-      });
-    });
-  });
-});
