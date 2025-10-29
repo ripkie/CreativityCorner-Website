@@ -136,7 +136,7 @@ const activityImage = document.getElementById('activityImage');
 setInterval(() => {
   currentImage = (currentImage + 1) % images.length;
   activityImage.src = images[currentImage];
-}, 3000); // Ganti gambar setiap 3 detik
+}, 3000);
 
 // Katalog Filter
 document.addEventListener("DOMContentLoaded", function () {
@@ -146,21 +146,70 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!filterButtons.length || !productCards.length) return;
   filterButtons.forEach(button => {
     button.addEventListener("click", () => {
-      // Remove 'active' class from all buttons and add to the clicked one
       filterButtons.forEach(btn => btn.classList.remove("active"));
       button.classList.add("active");
 
       const filter = button.getAttribute("data-filter");
 
-      // Show/hide product cards based on filter
       productCards.forEach(card => {
         const category = card.getAttribute("data-category");
         if (filter === "all" || filter === category) {
-          card.classList.remove("hide"); // Show card
+          card.classList.remove("hide");
         } else {
-          card.classList.add("hide"); // Hide card
+          card.classList.add("hide");
         }
       });
     });
   });
 });
+
+// sticky navbar
+const navbar = document.querySelector(".navbar");
+const stickyThreshold = 50;
+
+if (navbar) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > stickyThreshold) {
+      navbar.classList.add("navbar-scrolled");
+    } else {
+      navbar.classList.remove("navbar-scrolled");
+    }
+  });
+}
+
+// hover section aktif
+const navLinks = document.querySelectorAll('.navbar .menu a[href^="#"]');
+const sections = document.querySelectorAll('section[id], div[id]');
+
+function changeNavActiveState() {
+  let currentSectionId = "";
+  const scrollPosition = window.scrollY;
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    const sectionHeight = section.offsetHeight;
+
+    if (section.id && scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+      currentSectionId = section.id;
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${currentSectionId}`) {
+      link.classList.add('active');
+    }
+  });
+
+  if (scrollPosition < 100 && currentSectionId === "") {
+    const homeLink = document.querySelector('.navbar .menu a[href="#home"]');
+    if (homeLink) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      homeLink.classList.add('active');
+    }
+  } else if (currentSectionId === "") {
+  }
+}
+
+window.addEventListener('scroll', changeNavActiveState);
+document.addEventListener('DOMContentLoaded', changeNavActiveState);
