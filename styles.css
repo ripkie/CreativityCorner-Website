@@ -23,9 +23,7 @@
 header {
   width: 100%;
   min-height: 100vh;
-  /* TAMBAHKAN INI: Beri ruang di atas untuk navbar awal */
   padding-top: 10px;
-  /* Coba 70px, sesuaikan jika perlu */
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/images/beeboy2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -33,6 +31,7 @@ header {
   color: white;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -62,49 +61,33 @@ header {
 
 .navbar.navbar-scrolled .menu li a:hover {
   color: #B60f0a;
-  /* Warna hover tetap merah */
 }
 
-/* ==== STYLE BARU UNTUK LINK MENU AKTIF ==== */
+/* warna hover aktif */
 .navbar .menu li a.active {
   color: #B60f0a;
-  /* Warna merah (atau warna lain yang menonjol) */
   font-weight: 700;
-  /* Sedikit lebih tebal */
-  /* Anda bisa tambahkan style lain, misal garis bawah: */
-  /* border-bottom: 2px solid #B60f0a; */
 }
 
-/* Penyesuaian saat navbar di-scroll (jika pakai sticky) */
 .navbar.navbar-scrolled .menu li a.active {
   color: #B60f0a;
-  /* Pastikan warna aktif tetap merah */
-  /* border-bottom-color: #B60f0a; */
-  /* Sesuaikan jika pakai border */
 }
 
 /* Penyesuaian di menu mobile */
 @media screen and (max-width: 768px) {
   .navbar .menu li a.active {
     background-color: rgba(182, 15, 10, 0.1);
-    /* Background merah tipis */
   }
 }
 
-/* ==== AKHIR STYLE BARU ==== */
-
 .navbar.navbar-scrolled .contact-btn {
   color: #B60f0a;
-  /* Warna teks tombol jadi merah */
   border-color: #B60f0a;
-  /* Warna border jadi merah */
   background-color: transparent;
-  /* Background kembali transparan */
 }
 
 .navbar.navbar-scrolled .contact-btn:hover {
   background-color: rgba(182, 15, 10, 0.05);
-  /* Efek hover merah tipis */
   border-color: #a00d08;
   color: #a00d08;
 }
@@ -113,26 +96,21 @@ header {
 .navbar.navbar-scrolled .hamburger-inner::before,
 .navbar.navbar-scrolled .hamburger-inner::after {
   background-color: #000;
-  /* Warna hamburger jadi hitam */
 }
 
 .navbar.navbar-scrolled .hamburger.is-active .hamburger-inner,
 .navbar.navbar-scrolled .hamburger.is-active .hamburger-inner::before,
 .navbar.navbar-scrolled .hamburger.is-active .hamburger-inner::after {
   background-color: #000;
-  /* Warna aktif juga hitam */
 }
 
 /* Penyesuaian padding saat scrolled di layar lebih kecil */
 @media screen and (max-width: 992px) {
   .navbar.navbar-scrolled {
     padding-left: 5%;
-    /* (100% - 90%)/2 */
     padding-right: 5%;
   }
 }
-
-/* ==== AKHIR STYLE BARU ==== */
 
 .navbar .box-navbar .logo h1 {
   color: white;
@@ -301,18 +279,12 @@ header {
     width: 250px;
     height: 100vh;
 
-    /* Perubahan untuk efek kyak ios 26 anjay */
     background-color: rgba(255, 255, 255, 0.2);
-    /* Latar belakang transparan */
     backdrop-filter: blur(10px);
-    /* belakangnya biar ngeblur */
     -webkit-backdrop-filter: blur(10px);
-    /* Dukungan untuk browser Safari */
     border-right: 1px solid rgba(255, 255, 255, 0.3);
-    /* Garis tepi tipis */
 
     transition: all 0.3s ease-out;
-    /* Transisi diperhalus */
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
