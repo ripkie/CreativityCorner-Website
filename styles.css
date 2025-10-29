@@ -901,34 +901,23 @@ header {
 
 .team-grid {
   display: grid;
-  /* Tentukan jumlah kolom, misal 3 kolom di desktop */
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  /* Jarak antar kartu */
   margin-top: 50px;
-  /* Jarak dari judul */
 }
 
-/* Style untuk kartu anggota (.box) */
 .team .box {
-  /* Kita tetap pakai class .box */
   text-align: center;
   padding: 25px 20px;
-  /* Padding di dalam kartu */
   background-color: #ffffff;
-  /* Background putih */
   border-radius: 15px;
-  /* Sudut lebih bulat */
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
-  /* Shadow lebih halus */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  /* Menjaga agar elemen tidak keluar */
 }
 
 .team .box:hover {
   transform: translateY(-8px);
-  /* Efek naik saat hover */
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
 }
 
@@ -938,51 +927,38 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  /* Jarak antara foto dan deskripsi */
   margin-top: 0;
-  /* Hapus margin atas jika ada */
+
 }
 
 /* Style foto anggota */
 .team .box .people img {
   width: 100px;
-  /* Ukuran foto */
   height: 100px;
   border-radius: 50%;
-  /* Foto bulat */
   object-fit: cover;
   border: 3px solid #eee;
-  /* Optional: border tipis di foto */
   transition: transform 0.3s ease;
 }
 
 .team .box:hover .people img {
   transform: scale(1.05);
-  /* Sedikit zoom saat hover kartu */
   border-color: #B60f0a;
-  /* Ganti warna border saat hover */
 }
 
 /* Style nama */
 .team .box .people .people-desc h3 {
   font-size: 1.1rem;
-  /* Ukuran font nama */
   color: #333;
   margin-bottom: 5px;
-  /* Jarak nama ke jabatan */
 }
 
 /* Style jabatan */
 .team .box .people .people-desc p {
   font-weight: 500;
-  /* Sedikit lebih tipis dari sebelumnya */
   color: #777;
-  /* Warna abu-abu */
   font-size: 0.9rem;
-  /* Ukuran font jabatan */
 }
-
-/* ==== AKHIR STYLE BARU ==== */
 
 @media (max-width: 768px) {
   .team-box .box {
@@ -1188,7 +1164,7 @@ footer {
   }
 }
 
-/* Footer */
+/* alhir footer */
 
 
 /* Copyright */
@@ -1320,17 +1296,17 @@ footer {
   border-color: #B60f0a;
 }
 
+/* akhr dari filter button katalog */
+
 /* Class to hide products */
 .product-card.hide {
   display: none;
 }
 
-/* Existing responsive adjustments */
 @media (max-width: 768px) {
   .container {
     width: 90%;
     padding: 0 15px;
-    /* Menambahkan padding horizontal untuk container */
   }
 
   .section-title {
@@ -1375,7 +1351,6 @@ footer {
   }
 }
 
-/* Optional: penyesuaian layar kecil bgt */
 @media (max-width: 480px) {
   .filter-btn {
     min-width: 100px;
@@ -1387,7 +1362,6 @@ footer {
   }
 }
 
-/* Landing Page New Sections Styles */
 
 .section-header {
   text-align: center;
@@ -1448,7 +1422,6 @@ footer {
   line-height: 1.6;
 }
 
-/* Featured Products Section */
 #products h2 {
   color: white;
 }
@@ -1501,7 +1474,7 @@ footer {
 }
 
 
-/* Responsive for Landing Page Sections */
+/* Responsive landing page*/
 @media (max-width: 992px) {
   .services-grid {
     grid-template-columns: 1fr;
