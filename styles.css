@@ -898,102 +898,91 @@ header {
   color: #555;
 }
 
-.team-slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  position: relative;
+
+.team-grid {
+  display: grid;
+  /* Tentukan jumlah kolom, misal 3 kolom di desktop */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  /* Jarak antar kartu */
+  margin-top: 50px;
+  /* Jarak dari judul */
 }
 
-.team-box {
-  display: flex;
-  width: 80%;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 15px;
-  padding: 20px 0;
-}
-
-.team-box::-webkit-scrollbar {
-  display: none;
-}
-
-.team-box .box {
-  flex: 0 0 30%;
+/* Style untuk kartu anggota (.box) */
+.team .box {
+  /* Kita tetap pakai class .box */
   text-align: center;
-  padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  background-color: white;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 25px 20px;
+  /* Padding di dalam kartu */
+  background-color: #ffffff;
+  /* Background putih */
+  border-radius: 15px;
+  /* Sudut lebih bulat */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+  /* Shadow lebih halus */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  /* Menjaga agar elemen tidak keluar */
 }
 
-.team-box .box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+.team .box:hover {
+  transform: translateY(-8px);
+  /* Efek naik saat hover */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
 }
 
-.team-box .box .people {
+/* Style untuk grup foto & deskripsi */
+.team .box .people {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 15px;
+  align-items: center;
+  gap: 15px;
+  /* Jarak antara foto dan deskripsi */
+  margin-top: 0;
+  /* Hapus margin atas jika ada */
 }
 
-.team-box .box .people img {
-  width: 80px;
-  height: 80px;
+/* Style foto anggota */
+.team .box .people img {
+  width: 100px;
+  /* Ukuran foto */
+  height: 100px;
   border-radius: 50%;
+  /* Foto bulat */
   object-fit: cover;
-  transition: transform 0.3s ease-in-out;
+  border: 3px solid #eee;
+  /* Optional: border tipis di foto */
+  transition: transform 0.3s ease;
 }
 
-.team-box .box:hover .people img {
-  transform: scale(1.1);
+.team .box:hover .people img {
+  transform: scale(1.05);
+  /* Sedikit zoom saat hover kartu */
+  border-color: #B60f0a;
+  /* Ganti warna border saat hover */
 }
 
-.team-box .box .people .people-desc h3 {
-  font-size: 1.2rem;
+/* Style nama */
+.team .box .people .people-desc h3 {
+  font-size: 1.1rem;
+  /* Ukuran font nama */
   color: #333;
+  margin-bottom: 5px;
+  /* Jarak nama ke jabatan */
 }
 
-.team-box .box .people .people-desc p {
-  font-weight: 600;
-  color: gray;
+/* Style jabatan */
+.team .box .people .people-desc p {
+  font-weight: 500;
+  /* Sedikit lebih tipis dari sebelumnya */
+  color: #777;
+  /* Warna abu-abu */
+  font-size: 0.9rem;
+  /* Ukuran font jabatan */
 }
 
-.prev-btn,
-.next-btn {
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-  background-color: grey;
-}
-
-.prev-btn {
-  position: absolute;
-  left: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.next-btn {
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-}
+/* ==== AKHIR STYLE BARU ==== */
 
 @media (max-width: 768px) {
   .team-box .box {
