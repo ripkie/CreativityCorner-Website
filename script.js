@@ -14,31 +14,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const swiperElement = document.querySelector(".mySwiper");
   if (swiperElement) {
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,  
+      slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
       autoplay: {
         delay: 3000,
-        disableOnInteraction: false, 
+        disableOnInteraction: false,
       },
       pagination: {
-        el: ".swiper-pagination",  
+        el: ".swiper-pagination",
         clickable: true,
         dynamicBullets: true,
       },
       navigation: {
-        nextEl: ".swiper-button-next", 
-        prevEl: ".swiper-button-prev", 
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
       breakpoints: {
         640: {
           slidesPerView: 1,
         },
         768: {
-          slidesPerView: 2,  
+          slidesPerView: 2,
         },
         1024: {
-          slidesPerView: 3, 
+          slidesPerView: 3,
         },
       },
     });
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function slideRight() {
     if (teamBox.scrollLeft + teamBox.clientWidth >= teamBox.scrollWidth) {
-      teamBox.scrollLeft = 0; 
+      teamBox.scrollLeft = 0;
     } else {
       teamBox.scrollBy({ left: scrollStep, behavior: "smooth" });
     }
@@ -138,3 +138,29 @@ setInterval(() => {
   activityImage.src = images[currentImage];
 }, 3000); // Ganti gambar setiap 3 detik
 
+// Katalog Filter
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const productCards = document.querySelectorAll(".product-card");
+
+  if (!filterButtons.length || !productCards.length) return;
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Remove 'active' class from all buttons and add to the clicked one
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const filter = button.getAttribute("data-filter");
+
+      // Show/hide product cards based on filter
+      productCards.forEach(card => {
+        const category = card.getAttribute("data-category");
+        if (filter === "all" || filter === category) {
+          card.classList.remove("hide"); // Show card
+        } else {
+          card.classList.add("hide"); // Hide card
+        }
+      });
+    });
+  });
+});
